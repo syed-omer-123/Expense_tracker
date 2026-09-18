@@ -530,6 +530,12 @@ a { color: inherit; text-decoration: none; }
 
 .legal-list li { margin-bottom: 0.35rem; }
 
+.legal-list strong,
+.legal-body strong {
+    font-weight: 600;
+    color: var(--ink);
+}
+
 .legal-link {
     color: var(--accent);
     font-weight: 500;
