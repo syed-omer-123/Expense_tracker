@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "PowerShell(.\\\\venv\\\\Scripts\\\\python.exe app.py)",
+      "PowerShell(.\\\\venv\\\\Scripts\\\\python.exe -m pip install -r requirements.txt)",
+      "PowerShell($ok = $false; foreach \\($i in 1..15\\) { try { $r = Invoke-WebRequest -Uri http://127.0.0.1:5001/ -UseBasicParsing -TimeoutSec 3; Write-Output \"HTTP $\\($r.StatusCode\\) - $\\($r.Content.Length\\) bytes\"; $ok = $true; break } catch { Start-Sleep -Milliseconds 700 } }; if \\(-not $ok\\) { Write-Output \"no response after retries\" })"
+    ]
+  }
+}
